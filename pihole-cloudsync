@@ -101,7 +101,7 @@ version() {
 export_tables() {
 	# Export from Gravity database
 	for tab in "${tables[@]}"; do
-		${SUDO} sqlite3 "${gravity_db}" -header -csv "SELECT * FROM \"${tab}\"" >"${tab}.csv"
+        ${SUDO} sqlite3 "${gravity_db}" -header -csv "SELECT * FROM \"${tab}\"" >"${personal_git_dir}/${tab}.csv"
 	done
 }
 
